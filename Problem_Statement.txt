@@ -1,0 +1,47 @@
+Objective
+Build a multi-agent AI system that accepts input in PDF, JSON, or Email (text) format, classifies the format and intent, and routes it to the appropriate agent. The system must maintain shared context (e.g., sender, topic, last extracted fields) to enable chaining and traceability.
+
+System Overview
+You will build 3 agents, orchestrated via a central Classifier Agent:
+
+1. Classifier Agent
+Input: raw file/email/JSON
+Classifies:
+Format: PDF / JSON / Email
+Intent: Invoice, RFQ, Complaint, Regulation, etc.
+Routes to correct agent
+Logs format + intent in memory
+
+2. JSON Agent
+Accepts structured JSON payloads
+Extracts/reformats to a target schema
+Flags anomalies or missing fields
+
+3. Email Agent
+Accepts email content
+Extracts sender, intent, urgency
+Formats for CRM-style usage
+
+Shared Memory Module (Lightweight)
+Stores:
+Source, type, timestamp
+Extracted values
+Thread or conversation ID
+Can be Redis, SQLite, or in-memory
+Must be accessible across agents
+
+ Example Flow
+User sends email → Classifier detects “Email + RFQ” → Routed to Email Agent → Extracts info → Memory logs result
+
+Tech Stack Suggestions
+Python
+LLMs (OpenAI or open-source)
+Redis / SQLite / JSON store for memory
+
+Submission Requirements
+Working video demo (mandatory)
+GitHub repo with:
+README.md
+Sample input files
+Folder structure
+Sample output logs or screenshots

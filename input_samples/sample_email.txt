@@ -1,0 +1,9 @@
+From: supplier@example.com
+Subject: RFQ for Widget Parts
+
+Hi Team,
+
+Please send quote for 100 units of Widget A by Friday.
+
+Best,
+John

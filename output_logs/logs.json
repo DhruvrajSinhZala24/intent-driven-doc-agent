@@ -1,0 +1,16 @@
+{
+  "document_id": "0e7232b6-1618-41d0-b587-dd2914990491",
+  "source": "input_samples/sample_email.txt",
+  "type": "Email",
+  "intent": "RFQ",
+  "timestamp": "2025-06-01T14:22:17.676796",
+  "extracted_data": {
+    "sender": "supplier@example.com",
+    "subject": "RFQ for Widget Parts",
+    "body_summary": "Please send quote for 100 units of Widget A by Friday.",
+    "urgency": 1,
+    "related_to": [
+      "RFQ"
+    ]
+  }
+}
